@@ -47,6 +47,21 @@ server.get('/', (req, res) => {
     .catch(err => res.status(500).json({error:"Wrong way"}))
 })
 
+server.post('/register', (req, res) => {
+  const register = req.body;
+  const hash = bcrypt.hashSync(register.password, 14);
+  register.password = hash;
+  if (!register.username || !register.password)
+  res.status(400).json({errorMessage: "Required username and password"});
+  db('users')
+    .insert(register)
+    .then(user => {
+      const token = generateToken(user);
+      res.status(201).json(token)
+    })
+    .catch(err => res.status(400).json({error: "Error Posting"}))
+})
+
 
 
 
