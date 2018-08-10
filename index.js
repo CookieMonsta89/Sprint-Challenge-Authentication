@@ -5,7 +5,7 @@ const { server } = require('./server');
 // const bcrypt = require('bcryptjs');
 // const jwt = require('jsonwebtoken');
 // const secret = 'this is a token fool';
-// const cors = require('cors');
+const cors = require('cors');
 // const dbGet = require('./config/routes.js');
 // const axios = require('axios');
 
@@ -40,6 +40,7 @@ const { server } = require('./server');
 // const server = express();
 
 // server.use(express.json());
+server.use(cors());
 
 ///////////////////my endpoints/////////////////
 
