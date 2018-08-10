@@ -45,7 +45,9 @@ class Jokes extends Component {
     render() { 
         return ( 
         <div>
+            <div className='fixing'>
             <h1>Jokes</h1>
+            </div>
             <div className="containerthree">
             
                 {this.state.jokes.map(joke => {

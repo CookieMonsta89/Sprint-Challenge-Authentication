@@ -9,6 +9,7 @@
     margin:40px;
     background-color:#222;
     color:white;
+    border-radius:25px;
     
 }
 
@@ -24,6 +25,7 @@
 
 h1 {
     margin-top:0;
+    color:white;
 }
 
 .logout {
