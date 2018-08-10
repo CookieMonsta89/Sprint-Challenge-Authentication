@@ -62,6 +62,24 @@ server.post('/register', (req, res) => {
     .catch(err => res.status(400).json({error: "Error Posting"}))
 })
 
+server.post('/login', function(req, res) {
+  const credentials = req.body;
+  db('users')
+    .where({username:credentials.username})
+    .first()
+    .then(function(user){
+      if (user && bcrypt.compareSync(credentials.password, user.password)) {
+        const token = generateToken(user);
+        res.send(token);
+      } else {
+        return res.status(401).json({error: "Incorrect Creds homie"})
+      }
+    })
+    .catch(function(error) {
+      res.status(500).json({error});
+    })
+})
+
 
 
 
