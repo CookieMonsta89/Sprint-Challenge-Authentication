@@ -20,7 +20,7 @@ class App extends Component {
           <button className='blue'>Register</button>
           </Link>
           <Link to ='/jokes'>
-          <button className='green'>Users</button>
+          <button className='green'>Jokes</button>
           </Link>
         </div>
         <h1>
