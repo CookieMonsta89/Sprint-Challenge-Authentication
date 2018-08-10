@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import {Link} from 'react-router-dom';
+import '../styles/signin.css';
 
 
 
@@ -44,8 +45,9 @@ class Signin extends Component {
         return ( 
         <div className='container'>
         <div className='topsign'>
+            
+            <div className="signs">
             <h1>Sign In</h1>
-            <div>
             
             <form onSubmit={this.logIn}>
               <input

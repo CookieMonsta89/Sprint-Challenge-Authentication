@@ -16,10 +16,10 @@ class App extends Component {
           <Link to='/signin'>
           <button className='red'>Sign In</button>
           </Link>
-          <Link to='/signup'>
+          <Link to='/register'>
           <button className='blue'>Register</button>
           </Link>
-          <Link to ='/users'>
+          <Link to ='/jokes'>
           <button className='green'>Users</button>
           </Link>
         </div>

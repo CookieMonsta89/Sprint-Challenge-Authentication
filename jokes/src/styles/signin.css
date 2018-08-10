@@ -1,0 +1,19 @@
+.container {
+    background:#222;
+}
+
+.signs {
+    background:white;
+    width: 600px;
+    margin: auto;
+    border-radius:25px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input {
+    margin-bottom: 20px;
+}
+

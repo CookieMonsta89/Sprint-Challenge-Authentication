@@ -4,6 +4,8 @@ import axios from 'axios';
 
 import { Link } from 'react-router-dom';
 
+import '../styles/jokes.css';
+
 
 
 class Jokes extends Component {
@@ -43,14 +45,14 @@ class Jokes extends Component {
     render() { 
         return ( 
         <div>
-            <h1>Users</h1>
-            <div className="users">
+            <h1>Jokes</h1>
+            <div className="containerthree">
             
                 {this.state.jokes.map(joke => {
                     return (
-                        <div className='userbox' key={joke.id}>
-                            <div className='user'>Type: {joke.type}</div>
-                            <div className='department'>Setup: {joke.setup}</div>
+                        <div className='jokebox' key={joke.id}>
+                            <div className='type'>Type: {joke.type}</div>
+                            <div className='setup'>Setup: {joke.setup}</div>
                             <div className='punch'>Punchline: {joke.punchline}</div>
                         </div>
                     )

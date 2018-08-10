@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import '../styles/signup.css';
 
 // axios.defaults.withCredentials = true;
 
@@ -22,7 +23,7 @@ class Signup extends Component {
             .then((response) => {
               const token = response.data;
               localStorage.setItem('jwt', token);
-              this.props.history.push('/api/users')
+              this.props.history.push('/jokes')
             })
             .catch(err => console.log(err));
 
@@ -41,7 +42,7 @@ class Signup extends Component {
 
     render() { 
         return ( 
-          <div className='container'>
+          <div className='containerone'>
           <div className='containertwo'>
             <h1>Register User</h1>
             <div className="userform">
