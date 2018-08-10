@@ -2,11 +2,15 @@ const axios = require('axios');
 
 const { authenticate } = require('./middlewares');
 
-module.exports = server => {
-  server.post('/api/register', register);
-  server.post('/api/login', login);
-  server.get('/api/jokes', authenticate, getJokes);
-};
+const generateToken = require('./middlewares');
+
+const protected = require('./middlewares');
+
+// module.exports = server => {
+//   server.post('/api/register', register);
+//   server.post('/api/login', login);
+//   server.get('/api/jokes', authenticate, getJokes);
+// };
 
 function register(req, res) {
   // implement user registration
